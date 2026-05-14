@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeetCode Progress Tracker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 16px;
+        width: 320px;
+        color: #111827;
+      }
+
+      h1 {
+        font-size: 16px;
+        margin: 0 0 12px;
+      }
+
+      .row {
+        margin-bottom: 10px;
+      }
+
+      .label {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 4px;
+        color: #4b5563;
+      }
+
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+      }
+
+      button {
+        border: none;
+        border-radius: 6px;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+
+      #save-tag {
+        background: #2563eb;
+        color: #fff;
+      }
+
+      #sync-now {
+        margin-top: 8px;
+        width: 100%;
+        background: #111827;
+        color: #fff;
+      }
+
+      .muted {
+        color: #6b7280;
+        font-size: 12px;
+      }
+
+      #status {
+        margin-top: 8px;
+        font-size: 12px;
+      }
+
+      #sync-indicator {
+        margin-top: 6px;
+        font-size: 12px;
+        color: #2563eb;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NeetCode Progress Tracker</h1>
+
+    <div class="row">
+      <label class="label" for="user-tag">Set Your Tag</label>
+      <input id="user-tag" type="text" placeholder="e.g. abhinav" />
+      <button id="save-tag" type="button">Save Tag</button>
+    </div>
+
+    <div class="row muted">Current tag: <span id="current-tag">Not set</span></div>
+    <div class="row muted">Last synced: <span id="last-synced">Never</span></div>
+
+    <button id="sync-now" type="button">Sync Now</button>
+    <div id="sync-indicator">Syncing...</div>
+    <div id="status" aria-live="polite"></div>
+
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
