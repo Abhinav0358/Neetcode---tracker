@@ -13,9 +13,8 @@ If the web app is already deployed:
 
 1. Open the deployed app URL ( `neetcode-tracker-nu.vercel.app`).
 2. Load the extension locally (Chrome → `chrome://extensions` → **Load unpacked** → select `extension/`).
-3. In extension `config.js`, set Supabase URL + anon key.
-4. Open `https://neetcode.io/practice`, set your tag in the extension popup, and click **Sync Now**.
-5. Go to the deployed dashboard and search your tag.
+3. Open `https://neetcode.io/practice`, set your tag in the extension popup, and click **Sync Now**.
+4. Go to the deployed dashboard and search your tag.
 
 You do **not** need to run the Next.js app locally to use the deployed version.
 
